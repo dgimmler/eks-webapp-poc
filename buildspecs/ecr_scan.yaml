@@ -1,0 +1,7 @@
+version: 0.1
+env:
+  shell: bash
+phases:
+  build:
+    commands:
+      - bash buildspecs/scripts/ecr_scan.sh

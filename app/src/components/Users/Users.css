@@ -1,0 +1,12 @@
+img {
+  border-radius: 50%;
+  width: 30px;
+}
+
+img:hover {
+  width: 100px;
+}
+
+.users-list .table {
+  margin-bottom: 25px;
+}

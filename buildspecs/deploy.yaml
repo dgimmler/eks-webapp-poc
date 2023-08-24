@@ -1,0 +1,8 @@
+version: 0.1
+env:
+  shell: bash
+phases:
+  build:
+    commands:
+      - export KUBECONFIG=$HOME/.kube/config
+      - bash buildspecs/scripts/deploy.sh

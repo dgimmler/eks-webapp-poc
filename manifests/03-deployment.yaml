@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: display-users
+  name: display-users-deployment
+  labels:
+    app: display-users
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: display-users
+  template:
+    metadata:
+      name: display-users-pod
+      labels:
+        app: display-users
+    spec:
+      containers:
+        - name: display-users-container
+          image: 123456789012.dkr.ecr.us-west-2.amazonaws.com/eks-webapp-poc:latest
+          ports:
+            - containerPort: 3000
+      imagePullSecrets:
+        - name: ecr

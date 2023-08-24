@@ -1,0 +1,10 @@
+version: 0.1
+env:
+  shell: bash
+phases:
+  install:
+    commands:
+      - cd app && npm install --include dev
+  build:
+    commands:
+      - cd app && npm test
